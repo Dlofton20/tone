@@ -1,0 +1,122 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "liga", "kern";
+          font-feature-settings: "liga", "kern";
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+html, body {
+  overflow: hidden;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+  background: linear-gradient(45deg, #000000, #232526);
+  padding: 3%;
+}
+
+.wrap {
+  padding: 3vw;
+  border-radius: 2vw;
+  box-shadow: 0 0 10px rgba(25, 25, 25, 0.25);
+  background: #2d2d2d;
+  background: radial-gradient(circle at top right, #474747, #2d2d2d);
+}
+
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 3vw;
+  border-radius: 2vw;
+  box-shadow: 0 0 10px rgba(25, 25, 25, 0.25);
+  background: #c0c0c0;
+  background: radial-gradient(circle at top right, #dadada, #c0c0c0);
+}
+
+.control {
+  width: 10vw;
+  max-width: 100px;
+  margin: 1vw;
+  overflow: visible;
+}
+.control__knob {
+  -webkit-transform-origin: 50%;
+          transform-origin: 50%;
+  transform-box: fill-box;
+  transition: -webkit-transform 500ms ease-out;
+  transition: transform 500ms ease-out;
+  transition: transform 500ms ease-out, -webkit-transform 500ms ease-out;
+  will-change: transform;
+}
+.control__indicator {
+  cursor: pointer;
+}
+.control__name {
+  text-transform: uppercase;
+}
+.control line {
+  stroke: #7C7C7C;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-miterlimit: 10;
+}
+.control text {
+  fill: #323232;
+  font-size: 8.3621px;
+}
+
+.control-group {
+  display: flex;
+  margin: 1.5vw 1vw;
+  position: relative;
+  border: #7C7C7C 0.3vw solid;
+  border-radius: 2vw;
+}
+.control-group__name {
+  color: #323232;
+  position: absolute;
+  bottom: 100%;
+  margin-bottom: 0.5vw;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 1vw;
+  text-transform: uppercase;
+}
+.control-group__controls {
+  display: flex;
+  align-items: center;
+}
+
+.preset__btn {
+  cursor: pointer;
+  font-size: 6vw;
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0 1vw;
+  transition: -webkit-transform 300ms ease-out;
+  transition: transform 300ms ease-out;
+  transition: transform 300ms ease-out, -webkit-transform 300ms ease-out;
+}
+.preset__btn:hover, .preset__btn:focus {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.preset__btn:active {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+}
